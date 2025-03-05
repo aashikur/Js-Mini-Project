@@ -65,9 +65,9 @@ function progressBar(progress){
             
                 if(progress == 4)
                     {
-                        strengthIndicator.innerText = 'Light Green';
-                        strengthIndicator.style.color = '#a2c7a2';
-                        strengthBar.style.background = `#a2c7a2`;
+                        strengthIndicator.innerText = 'Strong';
+                        strengthIndicator.style.color = '#8fff8f';
+                        strengthBar.style.background = `#8fff8f`;
                     }
                 
                     if(progress == 5)
