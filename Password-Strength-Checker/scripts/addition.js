@@ -1,4 +1,3 @@
-
 const popBox = ID('popBox');
 const popClosed = ID('popClosed');
 const confirmPass = ID('confirmBtn');
