@@ -1,14 +1,16 @@
 // Global Vaiable
 
 console.log("===================================");
-const userPwd = document.getElementById('userPwd');
-console.log(userPwd.length, 'top')
+const getId = (id) => document.getElementById(id);
 
 
 
-userPwd.addEventListener('keyup',function(){
-    const pwd = userPwd;
-    checklength(userPwd); 
+// Main Function
+getId('userPwd').addEventListener('keyup',function(){
+    
+    
+    checklength(userPwd,'digits8'); 
+    checkCapital(userPwd,'capital1'); 
 
     
 })
@@ -16,8 +18,67 @@ userPwd.addEventListener('keyup',function(){
 
 
 
-// Check Length
-function checklength(e){
-    if(e.value.length >= 8)
-        console.log(e.value.length);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  Check For if Number  is 8 Digits
+function checklength(inputField,worningTextID){
+    const condition = inputField.value.length >= 8
+    worningTextChange(worningTextID, condition);
+}
+
+//  Check For if Contain A-Z
+function checkCapital(inputField,worningTextID){
+    const condition = /[A-Z]/.test(inputField);
+    worningTextChange(worningTextID, condition);
+}
+
+
+
+// Worining Text Changes 
+function worningTextChange(id,condition){
+    const selectedTextField = document.getElementById(id);
+
+    if(condition)
+    {
+        selectedTextField.style.opacity = '1';
+        selectedTextField.querySelector('span').style.backgroundColor = '#86ff86';
+    } 
+    else {
+        selectedTextField.style.opacity = '0.35';
+        selectedTextField.style.color = '#ddd';
+        selectedTextField.querySelector('span').style.backgroundColor = '#fb2c36';
+    }
+    
 }
