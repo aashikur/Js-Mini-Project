@@ -7,7 +7,8 @@ const strengthIndicator = ID('strength-indicate');
 const strengthBar = ID('strength-bar');
 const togglePassword = ID('toggle-password');
 const eyeOpen = ID('eye-icon');
-const eyeClosed = ID('eye-closed')
+const eyeClosed = ID('eye-closed') ;
+let GlobalProgress = 0;
 
 
 togglePassword.addEventListener('click',()=>{
@@ -36,7 +37,12 @@ userGivenPassword.addEventListener('keyup',(event)=>{
     progress+= OneDigitsWarning();
     progress+= OneSimbolWarning();
 
+
+    GlobalProgress = progress;
     progressBar(progress);
+
+
+    ConfirmButtonAction(progress); // pop.js File
 
 })
 
