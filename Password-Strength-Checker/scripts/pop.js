@@ -5,7 +5,6 @@ const confirmPass = ID('confirmBtn');
 const mainForm = ID('mainForm');
 
 
-// popBox.style.display ='none';
 
 confirmPass.addEventListener('click',()=>{
     mainForm.classList.add('blur-lg');
@@ -16,9 +15,6 @@ confirmPass.addEventListener('click',()=>{
 popClosed.addEventListener('click',()=>{
     location.reload();
 })
-
-
-
 
 
 function ConfirmButtonAction(progress){
