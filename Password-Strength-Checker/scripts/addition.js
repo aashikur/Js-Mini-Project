@@ -2,12 +2,16 @@ const popBox = ID('popBox');
 const popClosed = ID('popClosed');
 const confirmPass = ID('confirmBtn');
 const mainForm = ID('mainForm');
+const strengthIndicate = ID('strength-indicate');
+const dynamicIndicator = ID('dynamic-indicator');
 
 
 
 confirmPass.addEventListener('click',()=>{
     mainForm.classList.add('blur-lg');
     popBox.style.display = 'flex';
+    dynamicIndicator.innerHTML = strengthIndicate.innerText;
+   
 })
 
 

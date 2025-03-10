@@ -152,7 +152,7 @@ function OneCapWarning(){
 
 function EightDigitsWarning(){
     
-    if(userGivenPassword.value.length >= 8)
+    if(userGivenPassword.value.length >= 17)
     {
         warningBoxText[0].style.opacity = '1';
         warningBoxText[0].querySelector('span').style.backgroundColor = '#85fd85';
